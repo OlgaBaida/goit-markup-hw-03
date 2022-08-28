@@ -30,25 +30,39 @@ body {
   letter-spacing: 0.03em;
 }
 .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+h1
+h2,
+h3,
+p {
   margin-top: 0;
   margin-bottom: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .list {
-  padding: 0;
+  padding-left: 0;
   margin: 0;
   list-style: none;
 }
 .page-header {
-  background-color: var(--whaite--bg-color);
   border-bottom: 1px solid var(--line-color);
 }
 .section {
-  width: 100%;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -57,9 +71,8 @@ body {
 }
 .container {
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin: 0 auto;
+  padding: 0 15;
 }
 .wrap-header {
   display: flex;
@@ -125,10 +138,9 @@ body {
 }
 .hero {
   background-color: var(--secondary-bg-color);
+  padding: 200px 0;
 }
 .hero-title {
-  margin-top: 0;
-  margin-bottom: 0;
   width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -142,11 +154,13 @@ body {
   text-transform: uppercase;
 }
 .hero-btn {
-  display: flex;
+  display: block;
   align-items: center;
   padding: 10px 32px;
+  border: none;
   border-radius: 4px;
   margin: 0 auto;
+  cursor: pointer;
 
   background-color: var(--accent-txt-color);
   font-family: inherit;
@@ -157,7 +171,6 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
 
-  cursor: pointer;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -173,17 +186,7 @@ body {
   line-height: 1.16;
   text-align: center;
 }
-h2,
-h3,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+
 .features-list {
   display: flex;
 }
@@ -218,7 +221,6 @@ img {
   display: flex;
 }
 .team-item {
-  box-sizing: border-box;
   box-shadow: 0px 1px 3px var(--shadow-color-12), 0px 1px 1px var(--shadow-color-14),
     0px 2px 1px var(--shadow-color-02);
   border-radius: 0px 0px 4px 4px;
@@ -227,8 +229,9 @@ img {
 .team-list .team-item:not(:last-child) {
   margin-right: 30px;
 }
-.team-pfoto {
-  margin-bottom: 30px;
+.team-text {
+  padding: 30px 70px;
+  white-space: nowrap;
 }
 .team-name {
   margin-bottom: 10px;
@@ -236,12 +239,10 @@ img {
   color: var(--primery-txt-color);
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: calc(19 / 16);
   text-align: center;
 }
 .team-position {
-  margin-bottom: 30px;
-
   text-align: center;
   font-size: 16px;
   line-height: calc(19 / 16);
@@ -270,15 +271,15 @@ img {
 .adress-section .adress-item:focus {
   color: var(--accent-txt-color);
 }
-.adress-item {
-  padding-bottom: 9px;
-  text-decoration: none;
-  color: var(--whaite-txt-color);
-  font-style: normal;
-  line-height: 1.7;
+.adress-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.adress { color: var(--whaite-txt-color);
+text-decoration: none;
+font-style: normal;
+line-height: 1.7;
 }
 .adress-contact {
-  padding-bottom: 9px;
   text-decoration: none;
   color: var(--whaite--bg-color-60);
   font-style: normal;
