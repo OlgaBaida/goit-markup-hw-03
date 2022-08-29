@@ -335,7 +335,7 @@ line-height: 1.7;
 }
 .portfolio-wrap {
   width: 370px;
-  border: 1px solid #EEEEEE;
+  
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -347,12 +347,10 @@ line-height: 1.7;
   margin-bottom: 20px;
 }
 .portfolio-txt {
-  margin-bottom: 20px;
-  margin-left: 24px;
-  margin-right: 24px;
- 
- 
-
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border: 1px solid #EEEEEE;
 }
 .portfolio-headline {
   margin-bottom: 4px;
